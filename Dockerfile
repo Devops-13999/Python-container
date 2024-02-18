@@ -2,6 +2,8 @@ FROM python
 
 WORKDIR /myapp
 
-COPY . /Data_Engineering.py .
+COPY . /sql_demo.py .
 
-CMD ["python", "Data_Engineering.py"]
+RUN pip install pymysql
+
+CMD ["python", "sql_demo.py"]
